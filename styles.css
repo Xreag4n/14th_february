@@ -14,7 +14,7 @@
 }
 
 header {
-    background-color: pink;
+    background-color: #F2B7D3;
     margin: -10px;
     padding: 5px;
     z-index: 1000;
@@ -120,4 +120,44 @@ p {
     padding-top: 0px;
     margin-top: -80px;
     margin-left: 60px;
+}
+
+body {
+    font-family: 'fearless';
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.tickets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ticket {
+    font-size: 30px;
+    background-color: #F2B7D3;
+    border: 1px solid #AE4C75;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    clip-path: polygon(
+        30px 0, calc(100% - 30px) 0, 100% 30px,
+        100% calc(100% - 30px), calc(100% - 30px) 100%,
+        30px 100%, 0 calc(100% - 30px), 0 30px
+    );    
+}
+
+.ticket h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.ticket p {
+    font-size: 10px;
+    margin: 10px 0;
 }
