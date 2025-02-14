@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>14th february</title>
+</head>
+<body style="background-image: url('templates/sunset.jpg'); background-size: cover; background-position: center;">
+    <header style="position: fixed; width: 100%;">
+        <nav>
+            <h1>14   FEBRUARY</h1>
+            <h1 class="th">th</h1>
+            <h1 class="eras">THE ERAS TOUR</h1>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="left">
+            <h2>Can we always be this close,</h2>
+            <h2 class="ever">forever and ever?</h2>
+        </div>
+        <div class="right">
+            <img src="templates/vinyl.png" alt="vinyl" class="vinilo">
+            <audio loop class="audio-controls">
+                <source src="audio/Lover.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+        </div>
+    </div>
+    <div>
+        <p>Habra personas que digan que es solo una fecha mas, inventada para que las tiendas de flores y regalos ganen mas dinero, sin embargo aun que asi fuera, a tu lado todos los dias son especiales y este no sera la excepción.</p>
+        <p>Quizas no pueda darte todo lo que quieres, pero te prometo que siempre me esforzare por hacerte feliz.</p>
+        <p>Quiero darte las gracias, porque apesar de que como es normal en las personas hemos tenido diferencias, lo hemos solucionado y seguimos juntos, incluso despues de que la vida nos haya separado por un largo tiempo nos volvio a juntar y estoy feliz de estar acá, a tu lado.</p>
+        <p class="my_lover">Entre nosotros existe algo magico que no se puede explicar ni comprobar con simples palabras, pero se que existe por que cada latido de mi corazon me lo dice.</p>
+        <div class="you_are">
+          <h2>You're</h2>
+          <h2 class="my">my my my my</h2>
+          <h2 class="lover">Lover</h2>
+        </div>
+        <p>A tu lado incluso los momentos que parecen mas simples se vuelven preciados recuerdos que atesoro en mi corazon.</p>
+        <p>No quiero ni imaginar un futuro que no este lleno de tus risas, tus besos y abrazos, esos ojos que me enamoran y esa complicidad que solo nosotros entendemos. Por que ser feliz es un lujo que solo podria perder al perderte a ti.</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const vinyl = document.querySelector(".vinilo");
+          const audio = document.querySelector(".audio-controls");
+      
+          vinyl.addEventListener("click", function () {
+            if (audio.paused) {
+              audio.play().catch(error => console.log("Reproducción bloqueada por el navegador", error));
+              vinyl.style.animationPlayState = "running"; // Ahora empieza a girar
+            } else {
+              audio.pause();
+              vinyl.style.animationPlayState = "paused"; // Se detiene
+            }
+          });
+        });
+    </script> 
+</body>
+</html>
